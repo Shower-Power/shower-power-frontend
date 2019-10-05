@@ -26,11 +26,7 @@ class App extends React.Component {
       body: JSON.stringify({}),
       headers: {"Content-Type": "application/json"}
     })
-    .then(res => {
-      // this.setState({currentShowerId: res.body._id})
-      console.log(this.state.currentShowerId)
-      console.log(JSON.stringify(res.body))
-    }).catch(err => console.log(err))
+    .then(response => console.log(response))
   }
 
   endShower = () => {
