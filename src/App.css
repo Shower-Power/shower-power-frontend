@@ -17,6 +17,11 @@
   padding-bottom: 30px;
 }
 
+.active-timer {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .Button {
   width: 250px;
   height: 60px;

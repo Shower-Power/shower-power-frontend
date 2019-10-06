@@ -23,6 +23,8 @@ class App extends React.Component {
       durationMessage: '',
       duration: null,
       timer: null,
+      showerTimer: null,
+      timeElapsed: 0,
       avgs: {
         length: null,
         maxT: null,
@@ -31,6 +33,14 @@ class App extends React.Component {
         incT: null
       }
     }
+  }
+
+  showerTimer = () => {
+    this.setState({showerTimer: setInterval(() => this.getElapsedTime(), 100)})
+  }
+
+  getElapsedTime = () => {
+    this.setState({timeElapsed: this.prettyDuration(Date.now() - this.state.showerStartedAt)})
   }
 
   toggleShower = () => {
@@ -46,6 +56,7 @@ class App extends React.Component {
         this.setState({currentShowerId: res.data._id})
       }).catch(err => console.log(err))
     this.getInitialData();
+    this.showerTimer();
   }
 
   endShower = () => {
@@ -66,6 +77,7 @@ class App extends React.Component {
     tempPeak: peakTemperature,
     humidityPeak: peakHumidity})
     clearInterval(this.state.timer)
+    clearInterval(this.state.showerTimer)
   }
 
   getAllShowerData = (currentShower) => {
@@ -171,6 +183,7 @@ class App extends React.Component {
         <div className="app-headline">keep it short!</div>
         <Button type={!this.state.showerIsOn ? 'turn-shower-on' : 'turn-shower-off' } onClick={this.toggleShower}/>
         {!this.state.showerIsOn && this.state.duration ? <Data data={data}/> : null}
+        {this.state.showerIsOn ? <div className="active-timer">{this.state.timeElapsed}</div> : null}
       </div>
     )
   }
