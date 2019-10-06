@@ -14,7 +14,7 @@ class Data extends React.Component {
                 <div className="data-point-spacer"/>
                     <DataPoint data={averageLength} label="average shower time" type="large"/>
                     <DataPoint data={length} label="length of shower" type="x-large"/>
-                    <DataPoint data={diffFromAverage} label = {`${length > averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
+                    <DataPoint data={diffFromAverage} label = {`${length < averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
                     <div className="data-point-spacer"/>
                 </div>
                 <div className="data-row">

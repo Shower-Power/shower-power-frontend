@@ -185,7 +185,7 @@ class App extends React.Component {
     }
     return (
       <div className="App">
-        <div className="app-title">SHWR|PWR</div>
+        <div className="app-title">SHWR PWR</div>
         <div className="app-headline">keep it short!</div>
         <Button type={!this.state.showerIsOn ? 'turn-shower-on' : 'turn-shower-off' } onClick={this.toggleShower}/>
         {!this.state.showerIsOn && this.state.duration ? <Data data={data}/> : null}
