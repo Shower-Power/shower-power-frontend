@@ -18,8 +18,6 @@ class Data extends React.Component {
                 <div className="data-row">
                     <DataPoint data={typeof peakT === 'number' ? peakT.toFixed(2) : peakT} label="Peak Temp" type="small"/>
                     <DataPoint data={typeof diffT === 'number' ? diffT.toFixed(2): diffT} label="Temp Increase" type="small"/>
-                </div>
-                <div className="data-row">
                     <DataPoint data={typeof peakH === 'number' ? peakH.toFixed(2) : peakH} label="Peak Humidity" type="small"/>
                     <DataPoint data={typeof diffH === 'number' ? diffH.toFixed(2) : diffH} label="Humidity Increase" type="small"/>
                 </div>
