@@ -7,10 +7,10 @@
 }
 
 .Button {
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 60px;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 25px;
   color: white;
   display: flex;
   align-items: center;
@@ -23,4 +23,34 @@
 
 .turn-shower-off {
   background-color: red;
+}
+
+.Data {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.data-point {
+  display: flex;
+  flex-direction: row;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.data-point-small {
+  font-size: 18px;
+}
+
+.data-point-large {
+  font-size: 25px;
+}
+
+.data-point-label {
+  font-size: 14px;
 }
