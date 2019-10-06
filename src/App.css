@@ -7,6 +7,7 @@
 }
 
 .app-title {
+  padding-top: 25px;
   font-size: 40px;
   font-weight: bold;
 }
@@ -62,7 +63,7 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -72,19 +73,26 @@
 }
 
 .data-point-small {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 .data-point-large {
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 30px;
 }
 
 .data-point-label-small {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .data-point-label-large {
+  font-size: 18px;
+}
+
+.data-point-label-x-large{
   font-size: 22px;
+}
+
+.data-point-x-large{
+  font-size: 35px;
+  font-weight: bold;
 }

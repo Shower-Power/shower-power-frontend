@@ -11,15 +11,27 @@ class Data extends React.Component {
         return (
             <div className="Data">
                 <div className="data-row">
-                    <DataPoint data={length} label="length of shower" type="large"/>
+                <div className="data-point-spacer"/>
                     <DataPoint data={averageLength} label="average shower time" type="large"/>
+                    <DataPoint data={length} label="length of shower" type="x-large"/>
                     <DataPoint data={diffFromAverage} label = {`${length > averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
+                    <div className="data-point-spacer"/>
                 </div>
                 <div className="data-row">
+                    <div className="data-point-spacer"/>
+                    <div className="data-point-spacer"/>
                     <DataPoint data={typeof peakT === 'number' ? peakT.toFixed(2) : peakT} label="Peak Temp" type="small"/>
                     <DataPoint data={typeof diffT === 'number' ? diffT.toFixed(2): diffT} label="Temp Increase" type="small"/>
+                    <div className="data-point-spacer"/>
+                    <div className="data-point-spacer"/>
+                </div>
+                <div className="data-row">
+                <div className="data-point-spacer"/>
+                <div className="data-point-spacer"/>
                     <DataPoint data={typeof peakH === 'number' ? peakH.toFixed(2) : peakH} label="Peak Humidity" type="small"/>
                     <DataPoint data={typeof diffH === 'number' ? diffH.toFixed(2) : diffH} label="Humidity Increase" type="small"/>
+                    <div className="data-point-spacer"/>
+                    <div className="data-point-spacer"/>
                 </div>
 
             </div>
