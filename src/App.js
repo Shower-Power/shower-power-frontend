@@ -49,12 +49,6 @@ class App extends React.Component {
     this.setState({showerIsOn});
   }
 
-  // turnLightOn = () => {
-  //   axios.post('/api/v1//feeds/{feed_key}/data/{id}', {''})
-  // }
-
-  // turnLightOff = () => {}
-
   startShower (){
     this.setState({showerStartedAt: Date.now()})
     axios.post('https://shower-power.herokuapp.com/api/v1/showers', {})
@@ -185,7 +179,7 @@ class App extends React.Component {
     }
     return (
       <div className="App">
-        <div className="app-title">SHWR PWR</div>
+        <div className="app-title">SHWR | PWR</div>
         <div className="app-headline">keep it short!</div>
         <Button type={!this.state.showerIsOn ? 'turn-shower-on' : 'turn-shower-off' } onClick={this.toggleShower}/>
         {!this.state.showerIsOn && this.state.duration ? <Data data={data}/> : null}
