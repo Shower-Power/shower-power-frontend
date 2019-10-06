@@ -6,6 +6,17 @@
   justify-content: center;
 }
 
+.app-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.app-headline {
+  font-size: 20px;
+  font-style: italic;
+  padding-bottom: 30px;
+}
+
 .Button {
   width: 250px;
   height: 60px;
@@ -15,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .turn-shower-on {
@@ -28,27 +40,34 @@
 .Data {
   display: flex;
   align-items: center;
-  align-content: center;
+  justify-content: center;
   border: 2px solid black;
   border-radius: 5px;
+  width: 90%;
+  padding: 15px;
 }
 
 .data-point {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .data-row {
   display: flex;
+  width: 100%;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .data-point-small {
   font-size: 18px;
+  font-weight: bold;
 }
 
 .data-point-large {
   font-size: 25px;
+  font-weight: bold;
 }
 
 .data-point-label {
