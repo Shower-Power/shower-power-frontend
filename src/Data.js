@@ -10,9 +10,9 @@ class Data extends React.Component {
         const {length, averageLength, diffFromAverage, peakT, avgPeakT, diffT, avgDiffT, peakH, avgPeakH, diffH, avgDiffH} = this.props.data;
         return (
             <div className="Data">
-                <div className="data-row first-row">
+                <div className="data-row">
                     <DataPoint data={length} label="length of shower" type="large"/>
-                    <DataPoint data={averageLength} label="avg shower time" type="large"/>
+                    <DataPoint data={averageLength} label="average shower time" type="large"/>
                     <DataPoint data={diffFromAverage} label = {`${length > averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
                 </div>
                 <div className="data-row">
@@ -38,7 +38,7 @@ class DataPoint extends React.Component {
         return(
             <div className="data-point">
                 <div className={`data-point-${type}`}>{data}</div>
-                <div className="data-point-label">{label}</div>
+                <div className={`data-point-label-${type}`}>{label}</div>
             </div>
         )
     }

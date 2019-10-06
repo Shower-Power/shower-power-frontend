@@ -117,7 +117,7 @@ class App extends React.Component {
   }
 
   calcAvg = (data) => {
-    const total = data.reduce((acc, cur) => acc + cur);
+    const total = data.reduce((acc, cur) => acc + cur, 0);
     return (total/data.length).toFixed(2)
   }
 
@@ -173,7 +173,7 @@ class App extends React.Component {
       avgPeakH: this.state.avgs.maxT,
       avgPeakT: this.state.avgs.maxH,
       diffH: this.state.peakHumidity - this.state.initialHumidity,
-      diffT: this.state.peakTemperature - this.startShower.initialTemperature,
+      diffT: this.state.peakTemperature - this.state.initialTemperature,
       avgDiffH: this.state.avgs.incH,
       avgDiffT: this.state.avgs.incT
     }
