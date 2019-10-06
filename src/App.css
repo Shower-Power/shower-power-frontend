@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Slab', serif;
+  background-color: lightblue;
+  height: 100vh;
 }
 
 .app-title {
@@ -55,6 +57,7 @@
   border-radius: 5px;
   width: 70%;
   padding: 15px;
+  background-color: aliceblue;
 }
 
 .data-point {
