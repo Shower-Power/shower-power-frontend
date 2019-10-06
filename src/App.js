@@ -69,7 +69,6 @@ class App extends React.Component {
   }
 
   getAllShowerData = (currentShower) => {
-    console.log("current", currentShower)
     axios.get('https://shower-power.herokuapp.com/api/v1/showers/').then(res => {
       const data = res.data.concat(currentShower)
       this.calculateAverages(data)
