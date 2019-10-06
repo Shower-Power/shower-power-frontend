@@ -10,26 +10,29 @@ class Data extends React.Component {
         // average shower time, how much longer/shorter this time
         // start, peak, delta humidity
         // start, peak, delta temp
-        const {length, averageLength, diffFromAverage} = this.props.data;
+        console.log(this.props)
+        const {length, averageLength, diffFromAverage, peakT, avgPeakT, diffT, avgDiffT, peakH, avgPeakH, diffH, avgDiffH} = this.props.data;
         return (
             <div className="Data">
-                <div className="data-row">
+                <div className="data-row first-row">
                     <DataPoint data={length} label="length of shower" type="large"/>
                     <DataPoint data={averageLength} label="avg shower time" type="large"/>
-                    <DataPoint length={diffFromAverage} label = {`${length > averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
-                </div>
-                {/* <div className="data-row">
-                    <DataPoint data={peakT} label={} type="large"/>
-                    <DataPoint data={avgPeakT} label={} type="small"/>
-                    <DataPoint data={diffT} label={} type="large"/>
-                    <DataPoint data={avgDiffT} label={} type="small"/>
+                    <DataPoint data={diffFromAverage} label = {`${length > averageLength ? 'Longer':'Shorter'} than average`} type="large"/>
                 </div>
                 <div className="data-row">
-                    <DataPoint data={peakH} label={} type="large"/>
-                    <DataPoint data={avgPeakH} label={} type="small"/>
-                    <DataPoint data={diffH} label={} type="large"/>
-                    <DataPoint data={avgDiffH} label={} type="small"/>
-                </div> */}
+                    <DataPoint data={typeof peakT === 'number' ? peakT.toFixed(2) : peakT} label="Peak Temp" type="small"/>
+                    <DataPoint data={avgPeakT} label="Average Peak" type="small"/>
+                    <div className="data-point-spacer"/>
+                    <DataPoint data={typeof diffT === 'number' ? diffT.toFixed(2): diffT} label="Temp Increase" type="small"/>
+                    <DataPoint data={avgDiffT} label="Average Increase" type="small"/>
+                </div>
+                <div className="data-row">
+                    <DataPoint data={typeof peakH === 'number' ? peakH.toFixed(2) : peakH} label="Peak Humidity" type="small"/>
+                    <DataPoint data={avgPeakH} label="Average Peak" type="small"/>
+                    <div className="data-point-spacer"/>
+                    <DataPoint data={typeof diffH === 'number' ? diffH.toFixed(2) : diffH} label="Humidity Increase" type="small"/>
+                    <DataPoint data={avgDiffH} label="Average Increase" type="small"/>
+                </div>
 
             </div>
         );

@@ -39,6 +39,7 @@
 
 .Data {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid black;
@@ -58,6 +59,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  padding-top: 20px;
+}
+
+.first-row {
+  padding-bottom: 20px;
+}
+
+.data-point-spacer {
+  width: 10px;
 }
 
 .data-point-small {

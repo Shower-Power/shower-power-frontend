@@ -106,7 +106,7 @@ class App extends React.Component {
 
   calcAvg = (data) => {
     const total = data.reduce((acc, cur) => acc + cur);
-    return total/data.length
+    return (total/data.length).toFixed(2)
   }
 
   calculateDuration = () => {
@@ -149,6 +149,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.prettyDuration(Math.abs(this.state.avgs.length - this.state.duration)))
     const data = {
       length: this.state.durationMessage,
       averageLength: this.prettyDuration(this.state.avgs.length),
@@ -157,8 +158,8 @@ class App extends React.Component {
       startT: this.state.initialTemperature,
       peakH: this.state.peakHumidity,
       peakT: this.state.peakTemperature,
-      avgPeakH: this.state.avgs.peakT,
-      avgPeakT: this.state.avgs.peakH,
+      avgPeakH: this.state.avgs.maxT,
+      avgPeakT: this.state.avgs.maxH,
       diffH: this.state.peakHumidity - this.state.initialHumidity,
       diffT: this.state.peakTemperature - this.startShower.initialTemperature,
       avgDiffH: this.state.avgs.incH,
