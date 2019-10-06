@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-family: 'Roboto Slab', serif;
   background-color: lightblue;
   height: 100vh;
